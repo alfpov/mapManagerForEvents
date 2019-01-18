@@ -1,0 +1,59 @@
+*{
+  // padding: 0;
+  // margin: 0;
+  // border: 0;
+  // box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.panel {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+}
+
+#container {
+  height: 100vh !important;
+}
+
+.map {
+  overflow: auto;
+  position: relative;
+  height: 90vh !important;
+}
+
+.bar {
+  margin-top: 2vh;
+  background-color: #ffffff;
+}
+
+.drawMap {
+  height: 96vh;
+  margin-top: 2vh !important;
+  position: relative;
+  max-width: 100%;
+}
+
+.w-20 {
+  width: 20% !important;
+}
+
+@media (min-width: 576px){
+	
+}
+
+@media (min-width: 768px){
+	
+}
+
+@media (min-width: 992px){
+	
+}
