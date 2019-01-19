@@ -26,8 +26,13 @@ class MAP {
       width:30,
       height:30,
       btnCode:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<<<<<<< HEAD
         <path d="M304 192v32c0 6.6-5.4 12-12 12h-56v56c0 6.6-5.4 12-12 12h-32c-6.6 0-12-5.4-12-12v-56h-56c-6.6 0-12-5.4-12-12v-32c0-6.6 5.4-12 12-12h56v-56c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v56h56c6.6 0 12 5.4 12 12zm201 284.7L476.7 505c-9.4 9.4-24.6 9.4-33.9 0L343 405.3c-4.5-4.5-7-10.6-7-17V372c-35.3 27.6-79.7 44-128 44C93.1 416 0 322.9 0 208S93.1 0 208 0s208 93.1 208 208c0 48.3-16.4 92.7-44 128h16.3c6.4 0 12.5 2.5 17 7l99.7 99.7c9.3 9.4 9.3 24.6 0 34zM344 208c0-75.2-60.8-136-136-136S72 132.8 72 208s60.8 136 136 136 136-60.8 136-136z"/>
       </svg>`
+=======
+      <path d="M304 192v32c0 6.6-5.4 12-12 12h-56v56c0 6.6-5.4 12-12 12h-32c-6.6 0-12-5.4-12-12v-56h-56c-6.6 0-12-5.4-12-12v-32c0-6.6 5.4-12 12-12h56v-56c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v56h56c6.6 0 12 5.4 12 12zm201 284.7L476.7 505c-9.4 9.4-24.6 9.4-33.9 0L343 405.3c-4.5-4.5-7-10.6-7-17V372c-35.3 27.6-79.7 44-128 44C93.1 416 0 322.9 0 208S93.1 0 208 0s208 93.1 208 208c0 48.3-16.4 92.7-44 128h16.3c6.4 0 12.5 2.5 17 7l99.7 99.7c9.3 9.4 9.3 24.6 0 34zM344 208c0-75.2-60.8-136-136-136S72 132.8 72 208s60.8 136 136 136 136-60.8 136-136z"/>
+    </svg>`
+>>>>>>> master
     },
     {
       name:'zoomMinusBtn',
@@ -909,9 +914,13 @@ class MAP {
     try {
       let a
       if ( draw === 'mesasCuadrada' ) {
+<<<<<<< HEAD
         const SENTIDO = ( $( `#${this.buttonsControl.sentidoChair}1` )[0].checked ) ? 'horario' : 'antihorario'
 
         a = ( this.eraseZone ( `${this.zoneActive}Group` ) ) ? ( this.drawTableRect() ) ? ( this.paramSeats( 'Rect' ) ) ? this.textChairTable( `${this.zoneActive}Group` , SENTIDO ) : false : false : false;
+=======
+        a = ( this.eraseZone ( `${this.zoneActive}Group` ) ) ? ( this.drawTableRect() ) ? this.paramSeats( 'Rect' ) : false : false;
+>>>>>>> master
 
         if ( a ) {
           SVG.get( `${this.zoneActive}Group` ).attr({
@@ -925,9 +934,13 @@ class MAP {
           return false
         }
       } else if ( draw === 'mesasCircular' ) {
+<<<<<<< HEAD
         const SENTIDO = ( $( `#${this.buttonsControl.sentidoChair}1` )[0].checked ) ? 'horario' : 'antihorario'
 
         a = ( this.eraseZone ( `${this.zoneActive}Group` ) ) ? ( this.drawTableCircle() ) ? ( this.paramSeats( 'Circle' ) ) ? this.textChairTable( `${this.zoneActive}Group` , SENTIDO ) : false : false : false;
+=======
+        a = ( this.eraseZone ( `${this.zoneActive}Group` ) ) ? ( this.drawTableCircle() ) ? this.paramSeats( 'Circle' ) : false : false;
+>>>>>>> master
 
         if ( a ) {
           SVG.get( `${this.zoneActive}Group` ).attr({
@@ -1038,13 +1051,22 @@ class MAP {
       const COLUMNA = $( `#${this.inputs.idCantCol}` ).val()
       const CANTIDAD = parseInt( FILA ) * parseInt( COLUMNA )
 
+<<<<<<< HEAD
+=======
+      const SENTIDO = ( $( `#${this.buttonsControl.sentidoChair}1` )[0].checked ) ? 'horario' : 'antihorario'
+
+>>>>>>> master
       if ( this.initChairRect() ) {
         const XY = ( this.groupsGraph( `${this.zoneActive}Group` , CANTIDAD , 'table' ) ) ? this.xyGraphInit( parseInt( FILA ) , parseInt( COLUMNA ) , this.tables.rect.cellX , this.tables.rect.cellY ) : false
 
         if ( XY === false ) {
           return false
         } else {
+<<<<<<< HEAD
           return ( this.tablesRect( `${this.zoneActive}Group` , parseInt( FILA ) , parseInt( COLUMNA ) , XY.x , XY.y ) ) ? ( this.textGraphTablesRect( `${this.zoneActive}Group` ) ) ? ( this.rectAdapter( `${this.zoneActive}Group` , parseInt( FILA ) , parseInt( COLUMNA ) , this.tables.rect.cellX , this.tables.rect.cellY ) ) ? this.viewBoxAdapter( `${this.zoneActive}Group` ) : false : false : false
+=======
+          return ( this.tablesRect( `${this.zoneActive}Group` , parseInt( FILA ) , parseInt( COLUMNA ) , XY.x , XY.y ) ) ? ( this.textGraphTablesRect( `${this.zoneActive}Group` ) ) ? ( this.textChairRect( `${this.zoneActive}Group` , SENTIDO ) ) ? ( this.rectAdapter( `${this.zoneActive}Group` , parseInt( FILA ) , parseInt( COLUMNA ) , this.tables.rect.cellX , this.tables.rect.cellY ) ) ? this.viewBoxAdapter( `${this.zoneActive}Group` ) : false : false : false : false
+>>>>>>> master
         }
       } else {
         return false
@@ -1540,6 +1562,7 @@ class MAP {
   }
 
   //NOTE Dibuja el indice de chairs
+<<<<<<< HEAD
   textChairTable ( idZona , sentido ) {
     try {
       let length
@@ -1591,6 +1614,26 @@ class MAP {
             table.node.childNodes[index].id = id.replace( `Seat${textContent}` , `Seat${cont}` )
             table.node.childNodes[index].textContent = cont
             cont++
+=======
+  textChairRect ( idZona , sentido ) {
+    try {
+      let length
+      let cont
+
+      SVG.select( `#${idZona} g[typeGroup="table"]` ).members.forEach( ( table , index ) => {
+        length = table.node.children.length
+        cont = 0
+
+        if ( sentido === 'horario' ) {
+          for (let index = length-1; index >= ( length/2 )+1; index--) {
+            cont++
+            table.node.children[index].nodeValue = cont
+          }
+        } else if ( sentido === 'antihorario' ) {
+          for (let index = ( length/2 )+1; index < length; index++) {
+            cont++
+            table.node.children[index].nodeValue = cont
+>>>>>>> master
           }
         }
       })
@@ -1689,7 +1732,11 @@ class MAP {
     }
   }
 
+<<<<<<< HEAD
   //NOTE Adapta sillas segun parametros de los botones de control
+=======
+  //NOTE Adapta sillas segun parametros de los botones de comandos
+>>>>>>> master
   paramSeats ( forma ) {
     try {
       if( $( `#${this.buttonsControl.referencia}1` )[0].checked ) {
@@ -2742,7 +2789,11 @@ class MAP {
 
             item.node.children[(LENGTH_CHILDREN/2)].attributes.id.value = `${idZona}text-${letra}`
             item.node.children[(LENGTH_CHILDREN/2)].textContent = letra
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> master
             for (let index = ( (LENGTH_CHILDREN/2)+1 ); index < LENGTH_CHILDREN; index++) {
               item.node.children[index].attributes.id.value = `${idZona}Seat${cont}text-${letra}`
               item.node.children[index].textContent = cont

@@ -10,7 +10,11 @@
   <meta name="keywords" content="Panel de control">
   <title>SVG</title>
   <!-- Icono -->
+<<<<<<< HEAD
   <link rel="icon" href="">
+=======
+  <link rel="icon" href="images/ED-icon.svg">
+>>>>>>> master
   <!-- Add Material CSS, replace Bootstrap CSS -->
   <link href="css/material.min.css" type="text/css" rel="stylesheet">
   <!-- mCustomScrollbar -->
